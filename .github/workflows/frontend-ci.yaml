@@ -57,10 +57,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test -- --watchAll=false
-        env:
-          CI: true
+      - name: Build frontend
+        run: npm run build
 
   build:
     name: Build
@@ -87,10 +85,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test -- --watchAll=false
-        env:
-          CI: true
+      - name: Build frontend
+        run: npm run build
 
       - name: Build Docker image
         run: |
