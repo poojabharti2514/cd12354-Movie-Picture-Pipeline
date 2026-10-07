@@ -58,7 +58,7 @@ jobs:
         run: npm ci
 
       - name: Build frontend
-        run: npm run build
+        run: CI=true npm test
 
   build:
     name: Build
@@ -86,7 +86,7 @@ jobs:
         run: npm ci
 
       - name: Build frontend
-        run: npm run build
+        run: CI=true npm test
 
       - name: Build Docker image
         run: |
